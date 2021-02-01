@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/search-advice-app/static/css/main.29ca11fc.chunk.css",
+    "main.js": "/search-advice-app/static/js/main.a21966e2.chunk.js",
+    "main.js.map": "/search-advice-app/static/js/main.a21966e2.chunk.js.map",
+    "runtime-main.js": "/search-advice-app/static/js/runtime-main.229ea260.js",
+    "runtime-main.js.map": "/search-advice-app/static/js/runtime-main.229ea260.js.map",
+    "static/js/2.b40fc7bf.chunk.js": "/search-advice-app/static/js/2.b40fc7bf.chunk.js",
+    "static/js/2.b40fc7bf.chunk.js.map": "/search-advice-app/static/js/2.b40fc7bf.chunk.js.map",
+    "static/js/3.63a53f90.chunk.js": "/search-advice-app/static/js/3.63a53f90.chunk.js",
+    "static/js/3.63a53f90.chunk.js.map": "/search-advice-app/static/js/3.63a53f90.chunk.js.map",
+    "index.html": "/search-advice-app/index.html",
+    "static/css/main.29ca11fc.chunk.css.map": "/search-advice-app/static/css/main.29ca11fc.chunk.css.map",
+    "static/js/2.b40fc7bf.chunk.js.LICENSE.txt": "/search-advice-app/static/js/2.b40fc7bf.chunk.js.LICENSE.txt",
+    "static/media/logo.c7231fa1.png": "/search-advice-app/static/media/logo.c7231fa1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.229ea260.js",
+    "static/js/2.b40fc7bf.chunk.js",
+    "static/css/main.29ca11fc.chunk.css",
+    "static/js/main.a21966e2.chunk.js"
+  ]
+}
