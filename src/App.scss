@@ -1,0 +1,27 @@
+.App {
+	font-family: sans-serif;
+	text-align: center;
+	padding: 3rem 2rem;
+	max-width: 632px;
+	margin: 0 auto;
+}
+.logo {
+	display: inline-block;
+	width: 272px;
+	margin-bottom: 2rem;
+}
+.slips-list {
+	margin-top: 2rem;
+	text-align: left;
+	list-style: none;
+	> li {
+		padding: 1rem;
+		margin: 0;
+		&:nth-child(odd) {
+			background-color: rgba(0, 0, 0, 0.16);
+		}
+		&:nth-child(even) {
+			background-color: rgba(0, 0, 0, 0.01);
+		}
+	}
+}
