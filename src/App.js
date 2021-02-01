@@ -10,7 +10,7 @@ class App extends React.Component {
 		this.state = {
 			slips: [],
 			searchTerm: '',
-			error: '',
+			info: '',
 			isFetchingSlips: false,
 		};
 	}
@@ -25,7 +25,7 @@ class App extends React.Component {
 		//check if search term is added and ammend queryType if needed
 		let queryType;
 		const slipArray = [];
-		this.setState({ isFetchingAdvice: true });
+		this.setState({ isFetchingSlips: true });
 		this.state.searchTerm ? (queryType = '/search/') : (queryType = '');
 
 		fetch(
@@ -45,15 +45,26 @@ class App extends React.Component {
         */
 
 				if (response.slips) {
-					this.setState({ slips: response.slips, error: '' });
-					console.log('slips');
+					this.setState({
+						slips: response.slips,
+						info: '',
+						searchTerm: '',
+						isFetchingSlips: false,
+					});
 				} else if (response.slip) {
 					slipArray.push(response.slip);
-					console.log('slipArray', slipArray);
-					this.setState({ slips: slipArray, error: '' });
+
+					this.setState({
+						slips: slipArray,
+						info: '',
+						isFetchingSlips: false,
+					});
 				} else if (response.message) {
-					this.setState({ error: response.message.text });
-					console.log('error');
+					this.setState({
+						info: response.message.text,
+						searchTerm: '',
+						isFetchingSlips: false,
+					});
 				}
 			});
 	};
@@ -62,7 +73,6 @@ class App extends React.Component {
 		event.preventDefault();
 		event.target.reset();
 		this.searchAdvice();
-		console.log('form submited');
 	};
 
 	renderSlips() {
@@ -76,8 +86,8 @@ class App extends React.Component {
 	}
 
 	render() {
-		console.log('----Render-----', !this.state.searchTerm.length);
-		const { error, isFetchingSlips } = this.state;
+		const { info, isFetchingSlips } = this.state;
+
 		return (
 			<div className="App">
 				<img className="logo" alt="Get-advice-logo" src={Logo} />
@@ -91,9 +101,9 @@ class App extends React.Component {
 				/>
 
 				{isFetchingSlips ? (
-					'Searching for advice...'
-				) : error ? (
-					<p>{error}</p>
+					<p className="isa_warning">{'Searching for advice...'}</p>
+				) : info ? (
+					<p className="isa_info">{info}</p>
 				) : (
 					this.renderSlips()
 				)}
